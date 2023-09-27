@@ -1,0 +1,30 @@
+{
+  "name": "sos2223-dic-njo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "test-proyection-populations": "npx newman run ./tests/backend_njo.json -e ./tests/env/localhost_njo.json",
+    "test": "npm run test-proyection-populations"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolas-001/sos2223-dic-njo.git"
+  },
+  "author": "nicjimolm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolas-001/sos2223-dic-njo.git"
+  },
+  "homepage": "https://github.com/nicolas-001/sos2223-dic-njo.git",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nedb": "^1.8.0",
+    "newman": "^6.0.0",
+    "underscore": "^1.13.6"
+  }
+}
