@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      -run: cd sos2223-dic-njo
+      - run: cd sos2223-dic-njo
       - run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
