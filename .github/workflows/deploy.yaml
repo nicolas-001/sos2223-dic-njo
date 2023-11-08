@@ -11,29 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - - uses: actions/checkout@v2
-       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - uses: actions/checkout@v2
 
-      - run: cd frontend; npm install; cd ..
-      - run: cd frontend; npm run build; cd ..
-      
+      - run: npm install
+
       - run: npm start &
 
       - run: npm test
-      - name: Run Playwright tests
-        run: npx playwright test
 
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30 
+      - run: npx playwright test 
+      
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
         with:
