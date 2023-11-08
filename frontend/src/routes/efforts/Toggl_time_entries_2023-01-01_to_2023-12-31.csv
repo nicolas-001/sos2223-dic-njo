@@ -1,0 +1,5 @@
+﻿User,Email,Client,Project,Task,Description,Billable,Start date,Start time,End date,End time,Duration,Tags,Amount (USD)
+Nicolas Jimenez56,nicolas.jimenez56@gmail.com,,sos,Dejar el proyecto como estaba,"",Yes,2023-09-15,17:45:00,2023-09-16,03:45:00,10:00:00,,0.00
+Nicolas Jimenez56,nicolas.jimenez56@gmail.com,,sos,,realizar graficas,Yes,2023-10-02,19:00:00,2023-10-03,10:00:00,15:00:00,,0.00
+Nicolas Jimenez56,nicolas.jimenez56@gmail.com,,sos,,crear test e2e,Yes,2023-10-30,19:15:00,2023-10-30,22:15:00,03:00:00,,0.00
+Nicolas Jimenez56,nicolas.jimenez56@gmail.com,,sos,,Ajustar paginas principales,Yes,2023-10-31,20:30:00,2023-10-31,22:30:00,02:00:00,,0.00
