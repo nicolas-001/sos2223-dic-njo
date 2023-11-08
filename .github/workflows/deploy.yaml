@@ -17,6 +17,7 @@ jobs:
 
       - run: npm start &
 
+      -run: npx playwright install
       - run: npx playwright test 
 
       
