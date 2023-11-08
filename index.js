@@ -1,13 +1,13 @@
 import express from "express";
 import cors from "cors";
-
-import { loadBackend_njo } from "./routes/index-NJO.js";
+import {handler} from "./frontend/build/handler.js"
+import { loadBackend_njo_v2 } from "./routes/index-NJO-v2.js";
 var app = express();
-app.use(cors());
 
 
 
-var port = process.env.PORT || 3000;
+
+var port = process.env.PORT || 12345;
 
 
 
@@ -16,16 +16,19 @@ var port = process.env.PORT || 3000;
 app.use(express.json())
 //app.use("/", express.static("./public"));
 
+//Proxy:
+
 
 
 
 
 
 //Rutas
-
+app.use(cors());
     
-loadBackend_njo(app);
+loadBackend_njo_v2(app);
 
+app.use(handler);
     
 
     
