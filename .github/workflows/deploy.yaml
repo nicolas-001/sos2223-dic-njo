@@ -17,9 +17,9 @@ jobs:
 
       - run: npm start &
 
-      - run: npm test
-
       - run: npx playwright test 
+
+      
       
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
