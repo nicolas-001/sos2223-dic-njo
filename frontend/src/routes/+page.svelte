@@ -15,7 +15,7 @@
         <li><strong>Description:</strong> My project will consist in threatment of populations proyection data.
         </li>
         <p></p>
-        <li><strong>Repository:</strong> <a href="https://github.com/gti-sos/SOS2223-18">gti-sos/SOS2223-18</a></li>
+        <li><strong>Repository:</strong> <a href="https://github.com/nicolas-001/sos2223-dic-njo/">sos2223-dic-njo-</a></li>
         <p></p>
         <li><strong>URL:</strong> <a href="https://sos2223-dic-njo.ew.r.appspot.com/">https://sos2223-dic-njo.ew.r.appspot.com/</a></li>
         <p></p>
