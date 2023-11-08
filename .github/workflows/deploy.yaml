@@ -19,7 +19,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
         
-      - run: run: cd sos2223-dic-njo;cd frontend; npm install; cd ..
+      - run: cd frontend; npm install; cd ..
       - run: cd frontend; npm run build; cd ..
       
       - run: npm start &

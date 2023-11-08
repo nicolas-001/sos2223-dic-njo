@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sos2223-dic-njo",
+  "private_key_id": "213db2b485a42d557f33dc6befe500356689fa88",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyZHVIRbc042h4\nR5tSSk7yJufomKqmi7qeuoMnIeP34qMU/WhnQlqNI6nUezJ/fzydNG1dVXZ4nO2A\npYeHkVaAtckQmec1TwVm8h+Ari1GT/0qc4QvuQtpxLQkLFukuxWamkZviUlfTBtq\nfjtC8ZxwYA30dhRswyoFaSyv7b5ogKcOoykndKQd6IrNr4+rwWbjbPBrHcSeSvxH\nuKf3ozvtgTavKZRZyhIXuS3XmCZVQ3tECfTYNZRKBEmb+TNbMvR9ldM88UuClLmw\n5IBkV+lVPWVBZ/nR3vnHojCzSVrZURUylRT4V6bZUSAfIAeKrT8J5iEeN6pyiBeY\nL0U8+o3HAgMBAAECggEAEet+zzhsQ5x8cr4ECkDQrAk1zpWsvszWfaS6vARELt3O\nCAkUoxrKlyxNSRI/Fl5Pq8hdHBJpCOCqsvuYdl571AjEHoN3SFGcd0+R0+QAmZ7m\nDYz2awd+8AGvHtsd3ERhfTBLgbTGxr3nGyF8Y9MlezG1n9L6EPA3Q7028fft4qKu\n1Y+ABrmYwzNacQUTVpszUBsLvkp4lcGQvQwMFutc7xeF5HVNgFGSnGcEjfmMse6c\nDFVFDVzYr2t1bsEmtDTKBMh6spH5NAEbkNJWZ0BJo3oRGjtLnRjD7uHVQBFprfXQ\nkoLdxTnfDNhheAQKZekvYcDVuoY8GlDUfi90o8E4QQKBgQDfnzLZEsqP5vRzlZfh\nIs/Nf4K1Y+XpWYEKdFvIOPxwEdjgyStEfEa76e0SlLmnK2PEvqvd+dpMMIId09gH\ng8uwJSBV5uLMJz5RCJKS48TNdx9DmImJQMIzG2H7nIRnBpDOrrdTqVxkVLYuOEHM\nwLwclKIWWz7nILtfqj0/yh64MQKBgQDMOMcfYvg75jizHKG9Ra0B3YK/ZXGbb1MJ\npuX+c/xTUcaTmS+RuiMEwJ6f2Z0J01cr+Nwap6KE4ZWvQp+6RGhmHYOjbfv/HILv\n5/EAfqEgBk+6Q08V8nFGO56yBVKV2NZDppmxiwkXsIRND7ENyVykqfykNH6cQaoh\nWVnKAnUfdwKBgQCoRt93tIlT8qM/m3G4TH79kBenMi6gA+d0G425xRBJsVR4C0oQ\n9kgwPl9VXS+72Y3xTt58Yvlf3hz8Hx9wwD/2JGoJ2n4OzPU6+215Ngcx6pNPRakx\n7NZ2qQN52RVVhf5QWe/A+DB7m7egXls9nkewZjT3B+D1Ao+d9Li0mP+28QKBgA0j\nOewS+dUgolUjamQ6rz6HeXnGlOBi8PyV+AW+gGT7xcKJAD5nswkDOzEdVrTjG6CA\niehNEG9r860qpAvfirfG/kjtMmDe/K1iRma5vrPItChPXC8VQaQ7AaKCJSXupRoF\nBa4eO5+Cg4BRmhpA8ezF4rLNjbePodozXUtZjR9RAoGAChkPkf5+DqG7Ap7xy+Ax\ncxKcwwd7cOHp+4YlbOL/UMY24cgGZozMB0rryAgnj24gc7yi0vEyaHCuTuQfIkY1\nXrCb2+RYOcf1qVvOQZgS/3Nw7Z+vpnEcVCJrbQoJzOzEHZUdkJ5Sxd0B5NmIbDQW\n0qkG3tx0WUPyQspM+D/5rMc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sos2223-dic-njo-sc@sos2223-dic-njo.iam.gserviceaccount.com",
+  "client_id": "115733910402969206525",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sos2223-dic-njo-sc%40sos2223-dic-njo.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
