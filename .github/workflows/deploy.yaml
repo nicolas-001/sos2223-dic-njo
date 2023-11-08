@@ -11,22 +11,31 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: actions/checkout@v2
+     - uses: actions/checkout@v2
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd sos2223-dic-njo
-      - run: npm ci
+
+      - name: Install backend dependencies
+        run: npm ci
+
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-        
-      - run: cd frontend; npm install; cd ..
-      - run: cd frontend; npm run build; cd ..
-      
-      - run: npm start &
 
-      - run: npm test
-      - name: Run Playwright tests
+      - name: Install frontend dependences
+        run: cd frontend; npm install; cd ..
+      
+      - name: Build frontend
+        run: cd frontend; npm run build; cd ..
+      
+      - name: Run app
+        run: npm start &
+
+      - name: Run Backend tests
+        run: npm test
+      
+      - name: Run e2e tests
         run: npx playwright test
 
       - uses: actions/upload-artifact@v3
@@ -34,8 +43,7 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
-          retention-days: 30 
-
+          retention-days: 30
       
       
       - id: 'auth'
