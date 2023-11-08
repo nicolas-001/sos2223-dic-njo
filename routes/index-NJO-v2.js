@@ -10,175 +10,36 @@ const pagina = "https://documenter.getpostman.com/view/26062660/2s93RQSDWT";
           const BASE_API_URL = "/api/v2"
               
         
-          function loadBackend_njo(app){       
+          function loadBackend_njo_v2(app){       
 
           
-            var njoAPI = [
-                {"province":"Almeria", "gender":"Hombres","age": 21,"period":2021,"asset_thousand": 13.2,"tax":38.30},
-                {
-                  "province": "Cádiz",
-                  "gender": "Hombres",
-                  "age": 55,
-                  "period": 2018,
-                  "asset_thousand": 51.7,
-                  "tax": 30.7
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Hombres",
-                  "age": 16,
-                  "period": 2018,
-                  "asset_thousand": 319.4,
-                  "tax": 62.7
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Hombres",
-                  "age": 24,
-                  "period": 2019,
-                  "asset_thousand": 20.5,
-                  "tax": 33.6
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Hombres",
-                  "age": 34,
-                  "period": 2019,
-                  "asset_thousand": 66.2,
-                  "tax": 88.5
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Hombres",
-                  "age": 44,
-                  "period": 2019,
-                  "asset_thousand": 90.9,
-                  "tax": 91.7
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 55,
-                  "period": 2018,
-                  "asset_thousand": 31.7,
-                  "tax": 16.5
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 16,
-                  "period": 2018,
-                  "asset_thousand": 248.9,
-                  "tax": 47.6
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 24,
-                  "period": 2019,
-                  "asset_thousand": 16.8,
-                  "tax": 29.4
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 34,
-                  "period": 2019,
-                  "asset_thousand": 60.5,
-                  "tax": 83.1
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 44,
-                  "period": 2019,
-                  "asset_thousand": 72.5,
-                  "tax": 74.2
-                },
-                {
-                  "province": "Cádiz",
-                  "gender": "Mujeres",
-                  "age": 54,
-                  "period": 2019,
-                  "asset_thousand": 66.5,
-                  "tax": 66.4
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Hombres",
-                  "age": 16,
-                  "period": 2018,
-                  "asset_thousand": 235.7,
-                  "tax": 62.9
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Hombres",
-                  "age": 24,
-                  "period": 2019,
-                  "asset_thousand": 15.7,
-                  "tax": 35.0
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Hombres",
-                  "age": 34,
-                  "period": 2019,
-                  "asset_thousand": 49.1,
-                  "tax": 87.7
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Hombres",
-                  "age": 44,
-                  "period": 2019,
-                  "asset_thousand": 65.1,
-                  "tax": 91.7
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Mujeres",
-                  "age": 55,
-                  "period": 2018,
-                  "asset_thousand": 31.3,
-                  "tax": 20.7
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Mujeres",
-                  "age": 16,
-                  "period": 2018,
-                  "asset_thousand": 196.3,
-                  "tax": 50.5
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Mujeres",
-                  "age": 24,
-                  "period": 2019,
-                  "asset_thousand": 12.9,
-                  "tax": 30.8
-                },
-                {
-                  "province": "Granada",
-                  "gender": "Mujeres",
-                  "age": 34,
-                  "period": 2019,
-                  "asset_thousand": 43.7,
-                  "tax": 81.1
-                },
-                              {"province":"Sevilla", "gender":"Hombres", "age":31,"period": 2020,"asset_thousand": 40.1, "tax":90.6},
-                              {"province":"Almeria", "gender":"Hombres","age": 40, "period":2018, "asset_thousand":57.3,"tax": 92.9},
-                              {"province":"Malaga", "gender":"Hombres", "age":50, "period":2022, "asset_thousand":54.3,"tax": 89.5},
-                              {"province":"Almeria",	"gender":"Hombres", "age":55, "period":2021, "asset_thousand":31.3, "tax":31.9},
-                              {"province":"Cordoba",	"gender":"Hombres","age": 16, "period":2021, "asset_thousand":196.2,"tax": 65.6},
-                              {"province":"Cordoba", "gender":"Mujeres","age": 16, "period":2021, "asset_thousand":150.7,"tax":	51.8},
-                            {"province":"Malaga","gender":	"Mujeres", "age":20, "period":2021,"asset_thousand": 11.2, "tax":34.1},
-                            {"province":"Almeria", "gender":"Mujeres", "age":30, "period":2021, "asset_thousand":34.5,"tax": 81.5},
-                            {"province":"Almeria","gender":"Mujeres", "age":40, "period":2021,"asset_thousand": 41.5, "tax":75.6},
-                            {"province":"Sevilla","gender":"Mujeres", "age":25, "period":2019,"asset_thousand": 41.5, "tax":75.6},
-                            {"province":"Jaen","gender":"Mujeres", "age":30, "period":2021,"asset_thousand": 41.5, "tax":75.6}
-              ];
+var njoAPI = [
+    {"province":"Almeria", "gender":"Hombres","age": 21,"period":2021,"asset_thousand": 13.2,"tax":38.30},
+    {"province": "Cadiz","gender": "Hombres","age": 55,"period": 2018,"asset_thousand": 51.7,"tax": 30.7},
+    {"province": "Cadiz","gender": "Mujeres","age": 55,"period": 2018,"asset_thousand": 31.7,"tax": 16.5},
+    {"province": "Cadiz","gender": "Mujeres","age": 16,"period": 2018,"asset_thousand": 248.9,"tax": 47.6},
+    {"province": "Cadiz","gender": "Mujeres","age": 24,"period": 2019,"asset_thousand": 16.8,"tax": 29.4},
+    {"province": "Cadiz","gender": "Mujeres","age": 34,"period": 2019,"asset_thousand": 60.5,"tax": 83.1},
+    {"province": "Cadiz","gender": "Mujeres","age": 44,"period": 2019,"asset_thousand": 72.5,"tax": 74.2},
+    {"province": "Cadiz","gender": "Mujeres","age": 54,"period": 2019,"asset_thousand": 66.5,"tax": 66.4},
+    {"province": "Granada","gender": "Hombres","age": 16,"period": 2018,"asset_thousand": 235.7,"tax": 62.9},
+    {"province": "Granada","gender": "Hombres","age": 24,"period": 2019,"asset_thousand": 15.7,"tax": 35.0},
+    {"province": "Granada","gender": "Hombres","age": 34,"period": 2019,"asset_thousand": 49.1,"tax": 87.7},
+    {"province": "Granada","gender": "Hombres","age": 44,"period": 2019,"asset_thousand": 65.1,"tax": 91.7},
+    {"province": "Cordoba","gender": "Mujeres","age": 55,"period": 2018,"asset_thousand": 31.3,"tax": 20.7},
+    {"province":"Sevilla","gender":"Hombres", "age":31,"period": 2020,"asset_thousand": 40.1, "tax":90.6},
+    {"province":"Almeria","gender":"Hombres","age": 40, "period":2018, "asset_thousand":57.3,"tax": 92.9},
+    {"province":"Malaga","gender":"Hombres", "age":50, "period":2022, "asset_thousand":54.3,"tax": 89.5},
+    {"province":"Almeria",	"gender":"Hombres", "age":55, "period":2021, "asset_thousand":31.3, "tax":31.9},
+    {"province":"Cordoba",	"gender":"Hombres","age": 16, "period":2021, "asset_thousand":196.2,"tax": 65.6},
+    {"province":"Cordoba","gender":"Mujeres","age": 16, "period":2021, "asset_thousand":150.7,"tax":51.8},
+    {"province":"Malaga","gender":"Mujeres", "age":20, "period":2021,"asset_thousand": 11.2, "tax":34.1},
+    {"province":"Almeria",	"gender":"Hombres", "age":55, "period":2017, "asset_thousand":31.3, "tax":31.9},
+    {"province":"Cordoba",	"gender":"Hombres","age": 16, "period":2017, "asset_thousand":196.2,"tax": 65.6},
+    {"province":"Cordoba","gender":"Mujeres","age": 16, "period":2017, "asset_thousand":150.7,"tax":51.8},
+    {"province":"Malaga","gender":"Mujeres", "age":20, "period":2017,"asset_thousand": 11.2, "tax":34.1}
+    
+]    
 
 db.insert(njoAPI);
     console.log("Insertados los datos en ProyectionPopulations");
@@ -310,12 +171,13 @@ app.get(BASE_API_URL+"/proyection-populations/:province", (request, response) =>
   });    
 });
 
-app.get(BASE_API_URL+"/proyection-populations/:province/:period", (request,response) => {
+app.get(BASE_API_URL+"/proyection-populations/:province/:period/:age", (request,response) => {
   const province = request.params.province;
   const period = request.params.period;
+  const age = request.params.age;
   db.find({}, (err, list)=>{
       if(!err){
-          var filtro = list.filter(x => x.province == province && x.period == period);
+          var filtro = list.filter(x => x.province == province && x.period == period && x.age == age);
           if (filtro.length == 0) {            
               response.status(404).json('La ruta solicitada no existe');
           }else if(filtro.length == 1){
@@ -334,8 +196,35 @@ app.get(BASE_API_URL+"/proyection-populations/:province/:period", (request,respo
           response.sendStatus(500);
       }   
   });
-  console.log("Datos de /proyection-populations/:province/:period");
+  console.log("Datos de /proyection-populations/:province/:period/:age");
 });
+app.get(BASE_API_URL+"/proyection-populations/:province/:period/", (request,response) => {
+    const province = request.params.province;
+    const period = request.params.period;
+    const age = request.params.age;
+    db.find({}, (err, list)=>{
+        if(!err){
+            var filtro = list.filter(x => x.province == province && x.period == period);
+            if (filtro.length == 0) {            
+                response.status(404).json('La ruta solicitada no existe');
+            }else if(filtro.length == 1){
+                filtro.forEach(element => {
+                    delete element._id;
+                });
+                response.status(200).send(JSON.stringify(filtro[0], null, 2));
+            }else {
+                response.status(200).json(filtro.map((c)=>{
+                    delete c._id;
+                    return c;
+                }));
+            }
+        }else{
+            console.log("No se ha podido obtener los datos");
+            response.sendStatus(500);
+        }   
+    });
+    console.log("Datos de /proyection-populations/:province/:period/");
+  });
 
 app.post(BASE_API_URL + "/proyection-populations", (request, response) => {
   const province = request.body.province;
@@ -422,7 +311,6 @@ app.put(BASE_API_URL + "/proyection-populations/:province/:period", (request, re
       db.update(
           { province: provinceId, period: periodId },
           { $set: {
-            period: body.period, 
             tax: body.tax, 
             asset_thousand: body.asset_thousand, 
             gender: body.gender,
@@ -440,10 +328,43 @@ app.put(BASE_API_URL + "/proyection-populations/:province/:period", (request, re
           }
       );
   } else {
-      console.log("El mes en la URL no coincide con el mes en la solicitud");
-      response.status(400).send("El mes en la URL no coincide con el mes en la solicitud");
+      console.log("El año o provincia en la URL no coincide con el mes en la solicitud");
+      response.status(400).send("El año o provincia en la URL no coincide con el mes en la solicitud");
   }
 });
+app.put(BASE_API_URL + "/proyection-populations/:province/:period/:age", (request, response) => {
+    const provinceId = request.params.province;
+    const periodId = parseInt(request.params.period);
+    const ageId = parseInt(request.params.age);
+    const body = request.body;
+  
+    // Verifica si los valores de año coinciden
+    if (provinceId === body.province && periodId === body.period && ageId === body.age) {
+        // Actualiza el registro en la base de datos
+        db.update(
+            { province: provinceId, period: periodId, age: ageId},
+            { $set: {
+              tax: body.tax, 
+              asset_thousand: body.asset_thousand, 
+              gender: body.gender
+            
+            }},
+            {},
+            function (err, numReplaced) {
+                if (numReplaced === 1) {
+                    console.log("Nuevo PUT a /proyection-populations/:province/:period/:age");
+                    response.status(200).send("Actualizado");
+                } else {
+                    console.log("No se ha encontrado el objeto con la provincia, mes,edad especificados");
+                    response.status(400).send("No se ha encontrado el objeto con la provincia ,mes y edad especificados");
+                }
+            }
+        );
+    } else {
+        console.log("El año , provincia o edad en la URL no coincide con el mes en la solicitud");
+        response.status(400).send("El año ,provincia o edad en la URL no coincide con el mes en la solicitud");
+    }
+  });
 app.put(BASE_API_URL+"/proyection-populations", (request,response) =>{
   console.log("No se puede hacer este PUT /proyection-populations");
   response.sendStatus(405);
@@ -496,10 +417,24 @@ app.delete(BASE_API_URL+"/proyection-populations/", (req, res) => {
     }
   });
 });
+//PROXY
+app.get(BASE_API_URL+"/market", async (req, res) => {
+    try {
+      const url = 'https://sos2223-21.ew.r.appspot.com/api/v3/market-prices-stats';
+      const response = await fetch(url);
+      const data = await response.json();
+      res.json(data);
+      console.log("Proxy OK");
+    } catch (error) {
+      console.log('Error:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
 
-app.get(BASE_API_URL+'/proyection-populations/docs', (req, res) => {
-  res.redirect(pagina);
-});
+  app.get("/proyection-populations/docs",(req,res)=>
+  {
+      res.redirect("https://documenter.getpostman.com/view/26062660/2s93RQSDWT");
+  });
 
           }
-          export { loadBackend_njo };
+          export {loadBackend_njo_v2 };

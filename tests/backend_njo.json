@@ -1,23 +1,23 @@
 {
 	"info": {
 		"_postman_id": "1c83c47e-b08c-4692-8797-a461ec7abf4c",
-		"name": "api_rest_njo",
+		"name": "api-v2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "26062660"
 	},
 	"item": [
 		{
-			"name": "Get",
+			"name": "Get de todo",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
 							"pm.test(\"Numero de objetos\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.have.lengthOf(10);\r",
-							"    \r",
-							"});"
+							"    pm.expect(pm.response.json()).to.have.lengthOf(24);\r",
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -26,12 +26,12 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
 		{
-			"name": "Get Copy",
+			"name": "Error no encontrado",
 			"event": [
 				{
 					"listen": "test",
@@ -48,7 +48,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Segovia"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Segovia"
 			},
 			"response": []
 		},
@@ -72,12 +72,12 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Sevilla"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Sevilla"
 			},
 			"response": []
 		},
 		{
-			"name": "GET para dos parametros",
+			"name": "GET para 3 parametros",
 			"event": [
 				{
 					"listen": "test",
@@ -95,7 +95,30 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Sevilla/2020"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Sevilla/2020/31"
+			},
+			"response": []
+		},
+		{
+			"name": "GET para 2 parametros",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Nombre de la provincia\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.province).to.eql(\"Sevilla\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Sevilla/2020"
 			},
 			"response": []
 		},
@@ -120,12 +143,12 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Almeria/2021"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Almeria/2021"
 			},
 			"response": []
 		},
 		{
-			"name": "Get Copy",
+			"name": "Comprobar numero de elementos",
 			"event": [
 				{
 					"listen": "test",
@@ -133,7 +156,7 @@
 						"exec": [
 							"pm.test(\"Numero de objetos\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.have.lengthOf(9);\r",
+							"    pm.expect(jsonData).to.have.lengthOf(23);\r",
 							"    \r",
 							"});"
 						],
@@ -144,7 +167,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
@@ -178,7 +201,7 @@
 						}
 					}
 				},
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
@@ -191,7 +214,7 @@
 						"exec": [
 							"pm.test(\"Numero de objetos\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.have.lengthOf(9);\r",
+							"    pm.expect(jsonData).to.have.lengthOf(23);\r",
 							"    \r",
 							"});"
 						],
@@ -202,12 +225,12 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
 		{
-			"name": "Put 2 parametros",
+			"name": "Put prohibido",
 			"event": [
 				{
 					"listen": "test",
@@ -236,7 +259,7 @@
 						}
 					}
 				},
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
@@ -261,7 +284,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Sevilla"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Sevilla"
 			},
 			"response": []
 		},
@@ -295,7 +318,7 @@
 						}
 					}
 				},
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/"
 			},
 			"response": []
 		},
@@ -327,7 +350,7 @@
 						}
 					}
 				},
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/"
 			},
 			"response": []
 		},
@@ -352,7 +375,7 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/"
 			},
 			"response": []
 		},
@@ -387,7 +410,7 @@
 						}
 					}
 				},
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/Cordoba/2019"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/Cordoba/2019"
 			},
 			"response": []
 		},
@@ -400,7 +423,7 @@
 						"exec": [
 							"pm.test(\"Your test name\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.lengthOf(1);\r",
+							"    pm.expect(jsonData).to.lengthOf(8);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -411,13 +434,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_BASE}}/api/v1/proyection-populations/?period=2019",
+					"raw": "{{URL_BASE}}/api/v2/proyection-populations/?period=2019",
 					"host": [
 						"{{URL_BASE}}"
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"proyection-populations",
 						""
 					],
@@ -451,13 +474,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL_BASE}}/api/v1/proyection-populations?limit=5&offset=1",
+					"raw": "{{URL_BASE}}/api/v2/proyection-populations?limit=5&offset=1",
 					"host": [
 						"{{URL_BASE}}"
 					],
 					"path": [
 						"api",
-						"v1",
+						"v2",
 						"proyection-populations"
 					],
 					"query": [
@@ -485,7 +508,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"pm.test(\"Mensaje\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Se eliminaron 10 documentos de la colección.\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"Se eliminaron 24 documentos de la colección.\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -495,7 +518,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations"
 			},
 			"response": []
 		},
@@ -520,7 +543,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{URL_BASE}}/api/v1/proyection-populations/loadInitialData"
+				"url": "{{URL_BASE}}/api/v2/proyection-populations/loadInitialData"
 			},
 			"response": []
 		}
